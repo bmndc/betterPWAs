@@ -5,7 +5,7 @@
 	"start_url": "https://x.com/?utm_source=homescreen&utm_medium=shortcut",
 	"scope": "https://x.com/",
 	"display": "standalone",
-	"theme_color": "#ffffff",
+	"theme_color": "#1EA1F1",
 	"background_color": "#ffffff",
 	"gcm_sender_id": "49625052041",
 	"gcm_user_visible_only": true,

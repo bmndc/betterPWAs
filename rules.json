@@ -1,14 +1,11 @@
 [
-    {
-        "id": 1,
-        "priority": 1,
-        "action": {
-            "type": "block"
-        },
-        "condition": {
-            "urlFilter": "||abs.twimg.com/responsive-web/client-serviceworker/logo.1e98ddea.png",
-            "requestDomains": ["x.com"],
-            "resourceTypes": ["other"]
-        }
-    }
+	{
+		"id": 1,
+		"priority": 1,
+		"action": { "type": "block" },
+		"condition": {
+			"regexFilter": "^https://abs\\.twimg\\.com/responsive-web/client-serviceworker/logo\\..*\\.png$",
+			"resourceTypes": ["image", "xmlhttprequest", "other"]
+		}
+	}
 ]
