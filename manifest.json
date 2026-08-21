@@ -19,9 +19,14 @@
 		"type": "module"
 	},
 	"host_permissions": [
-		"https://github.com/*",
-		"https://teams.microsoft.com/*",
-		"https://x.com/*"
+		"*://github.com/*",
+		"*://*.github.com/*",
+		"*://teams.microsoft.com/*",
+		"*://*.teams.microsoft.com/*",
+		"*://x.com/*",
+		"*://*.x.com/*",
+		"*://twitter.com/*",
+		"*://*.twitter.com/*"
 	],
 	"content_scripts": [
 		{
@@ -60,7 +65,12 @@
 			"js": ["manifests/teams.microsoft.com.js", "injectManifest.js"]
 		},
 		{
-			"matches": ["https://x.com/*"],
+			"matches": [
+				"*://x.com/*",
+				"*://*.x.com/*",
+				"*://twitter.com/*",
+				"*://*.twitter.com/*"
+			],
 			"js": ["manifests/x.com.js", "injectManifest.js"]
 		},
 		{
@@ -124,5 +134,8 @@
 			}
 		]
 	},
-	"permissions": ["declarativeNetRequest"]
+	"permissions": [
+		"declarativeNetRequest",
+		"declarativeNetRequestWithHostAccess"
+	]
 }
