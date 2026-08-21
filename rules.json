@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "priority": 1,
+        "action": {
+            "type": "block"
+        },
+        "condition": {
+            "urlFilter": "||abs.twimg.com/responsive-web/client-serviceworker/logo.1e98ddea.png",
+            "requestDomains": ["x.com"],
+            "resourceTypes": ["other"]
+        }
+    }
+]
