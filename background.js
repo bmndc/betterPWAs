@@ -11,8 +11,7 @@ chrome.runtime.onInstalled.addListener(() => {
 			action: {
 				type: "modifyHeaders",
 				responseHeaders: [
-					{ header: "content-security-policy", operation: "remove" },
-					{ header: "content-security-policy-report-only", operation: "remove" }
+					{ header: "content-security-policy", "operation": "set", "value": "default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;" }
 				]
 			},
 			condition: {
@@ -23,7 +22,7 @@ chrome.runtime.onInstalled.addListener(() => {
 	chrome.declarativeNetRequest.updateDynamicRules({
 		removeRuleIds: [1],
 		addRules: rules
-	});
+	}).catch(err => console.error(err));
 });
 
 chrome.runtime.onMessage.addListener((request, sender) => {

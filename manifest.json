@@ -109,6 +109,7 @@
 		},
 		{
 			"resources": [
+				"manifests/x.com.json",
 				"manifests/icons/x.com/twitter-192.png",
 				"manifests/icons/x.com/twitter-512.png",
 				"manifests/icons/x.com/twitter-192-maskable.png",

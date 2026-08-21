@@ -1,17 +1,16 @@
 [
 	{
 		"id": 1,
-		"priority": 100,
+		"priority": 1,
 		"action": {
 			"type": "modifyHeaders",
 			"responseHeaders": [
-				{ "header": "content-security-policy", "operation": "remove" },
-				{ "header": "content-security-policy-report-only", "operation": "remove" }
+				{ "header": "content-security-policy", "operation": "set", "value": "default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;" }
 			]
 		},
 		"condition": {
-			"urlFilter": "*",
-			"requestDomains": ["x.com", "twitter.com", "github.com", "teams.microsoft.com"]
+			"requestDomains": ["x.com", "twitter.com", "github.com", "teams.microsoft.com"],
+			"resourceTypes": ["main_frame", "sub_frame"]
 		}
 	}
 ]
