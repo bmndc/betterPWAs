@@ -5,6 +5,7 @@
 	"description": "Improved installable web apps for selected sites.",
 	"icons": {
 		"48": "images/icon48.png",
+		"128": "images/icon128.png",
 		"512": "images/icon512.png"
 	},
 	"action": {
@@ -13,12 +14,15 @@
 		},
 		"default_title": "Better PWA: No betterment available"
 	},
-	"permissions": ["declarativeNetRequest", "storage", "tabs", "scripting"],
 	"background": {
 		"service_worker": "background.js",
 		"type": "module"
 	},
-	"host_permissions": ["https://github.com/*"],
+	"host_permissions": [
+		"https://github.com/*",
+		"https://teams.microsoft.com/*",
+		"https://x.com/*"
+	],
 	"content_scripts": [
 		{
 			"matches": ["https://www.smh.com.au/*"],
@@ -31,6 +35,37 @@
 		{
 			"matches": ["https://www.canva.com/*"],
 			"js": ["manifests/www.canva.com.js", "injectManifest.js"]
+		},
+		{
+			"matches": ["https://app.notion.com/*"],
+			"js": ["manifests/app.notion.com.js", "injectManifest.js"]
+		},
+		{
+			"matches": ["https://claude.ai/*"],
+			"js": ["manifests/claude.ai.js", "injectManifest.js"]
+		},
+		{
+			"matches": ["https://discord.com/*"],
+			"js": ["manifests/discord.com.js", "injectManifest.js"]
+		},
+		{
+			"matches": [
+				"https://outlook.live.com/*",
+				"https://outlook.office.com/*"
+			],
+			"js": ["manifests/outlook.live.com.js", "injectManifest.js"]
+		},
+		{
+			"matches": ["https://teams.microsoft.com/*"],
+			"js": ["manifests/teams.microsoft.com.js", "injectManifest.js"]
+		},
+		{
+			"matches": ["https://x.com/*"],
+			"js": ["manifests/x.com.js", "injectManifest.js"]
+		},
+		{
+			"matches": ["https://github.com/*"],
+			"js": ["manifests/github.com.js", "injectManifest.js"]
 		}
 	],
 	"web_accessible_resources": [
@@ -45,6 +80,49 @@
 				"manifests/icons/slack-512-maskable.png"
 			],
 			"matches": ["https://app.slack.com/*"]
+		},
+		{
+			"resources": [
+				"manifests/icons/www.canva.com/canva-192-maskable.png",
+				"manifests/icons/www.canva.com/canva-512-maskable.png"
+			],
+			"matches": ["https://www.canva.com/*"]
+		},
+		{
+			"resources": [
+				"manifests/icons/claude.ai/claude-16-monochrome.png",
+				"manifests/icons/claude.ai/claude-32-monochrome.png",
+				"manifests/icons/claude.ai/claude-48-monochrome.png",
+				"manifests/icons/claude.ai/claude-512-monochrome.png"
+			],
+			"matches": ["https://claude.ai/*"]
+		},
+		{
+			"resources": [
+				"manifests/icons/x.com/twitter-192.png",
+				"manifests/icons/x.com/twitter-512.png",
+				"manifests/icons/x.com/twitter-192-maskable.png",
+				"manifests/icons/x.com/twitter-512-maskable.png",
+				"manifests/icons/x.com/twitter-16-monochrome.png",
+				"manifests/icons/x.com/twitter-32-monochrome.png",
+				"manifests/icons/x.com/twitter-48-monochrome.png",
+				"manifests/icons/x.com/twitter-512-monochrome.png",
+				"manifests/icons/x.com/icon-compose.png",
+				"manifests/icons/x.com/icon-search-stroke.png",
+				"manifests/icons/x.com/icon-notifications-stroke.png",
+				"manifests/icons/x.com/icon-messages-stroke.png"
+			],
+			"matches": ["https://x.com/*"]
 		}
-	]
+	],
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "ruleset_1",
+				"enabled": true,
+				"path": "rules.json"
+			}
+		]
+	},
+	"permissions": ["declarativeNetRequest"]
 }
