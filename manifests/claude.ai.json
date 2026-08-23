@@ -9,6 +9,11 @@
 	"background_color": "hsl(49 26.8% 92%)",
 	"icons": [
 		{
+			"src": "icons/claude.ai/claude.svg",
+			"type": "image/svg",
+			"purpose": "any"
+		},
+		{
 			"sizes": "128x128",
 			"src": "icons/claude.ai/claude-128-maskable.png",
 			"type": "image/png",
