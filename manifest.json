@@ -1,151 +1,134 @@
 {
-    "manifest_version": 3,
-    "name": "Better PWAs",
-    "version": "1.1.0",
-    "description": "Improved installable web apps for selected sites.",
-    "icons": {
-        "48": "images/icon48.png",
-        "128": "images/icon128.png",
-        "512": "images/icon512.png"
-    },
-    "action": {
-        "default_icon": {
-            "48": "images/iconDisabled48.png"
-        },
-        "default_title": "Better PWA: No betterment available"
-    },
-    "background": {
-        "service_worker": "background.js",
-        "type": "module"
-    },
-    "content_scripts": [
-        {
-            "matches": [
-                "https://www.smh.com.au/*",
-                "https://app.slack.com/*",
-                "https://www.canva.com/*",
-                "https://app.notion.com/*",
-                "https://claude.ai/*",
-                "https://discord.com/*",
-                "https://outlook.live.com/*",
-                "https://outlook.office.com/*",
-                "https://teams.microsoft.com/*",
-                "https://x.com/*",
-                "https://github.com/*"
-            ],
-            "js": [
-                "injectManifest.js"
-            ]
-        }
-    ],
-    "web_accessible_resources": [
-        {
-            "resources": [
-                "manifests/www.smh.com.au.json",
-                "manifests/icons/www.smh.com.au/*"
-            ],
-            "matches": [
-                "https://www.smh.com.au/*"
-            ]
-        },
-        {
-            "resources": [
-                "manifests/app.slack.com.json",
-                "manifests/icons/app.slack.com/*"
-            ],
-            "matches": [
-                "https://app.slack.com/*"
-            ]
-        },
-        {
-            "resources": [
-                "manifests/www.canva.com.json",
-                "manifests/icons/www.canva.com/*"
-            ],
-            "matches": [
-                "https://www.canva.com/*"
-            ]
-        },
-        {
-            "resources": [
-                "manifests/app.notion.com.json",
-                "manifests/icons/app.notion.com/*"
-            ],
-            "matches": [
-                "https://app.notion.com/*"
-            ]
-        },
-        {
-            "resources": [
-                "manifests/claude.ai.json",
-                "manifests/icons/claude.ai/*"
-            ],
-            "matches": [
-                "https://claude.ai/*"
-            ]
-        },
-        {
-            "resources": [
-                "manifests/discord.com.json",
-                "manifests/icons/discord.com/*"
-            ],
-            "matches": [
-                "https://discord.com/*"
-            ]
-        },
-        {
-            "resources": [
-                "manifests/outlook.live.com.json",
-                "manifests/outlook.office.com.json",
-                "manifests/icons/outlook.live.com/*"
-            ],
-            "matches": [
-                "https://outlook.live.com/*",
-                "https://outlook.office.com/*"
-            ]
-        },
-        {
-            "resources": [
-                "manifests/teams.microsoft.com.json",
-                "manifests/icons/teams.microsoft.com/*"
-            ],
-            "matches": [
-                "https://teams.microsoft.com/*"
-            ]
-        },
-        {
-            "resources": [
-                "manifests/x.com.json",
-                "manifests/icons/x.com/*"
-            ],
-            "matches": [
-                "https://x.com/*"
-            ]
-        },
-        {
-            "resources": [
-                "manifests/github.com.json",
-                "manifests/icons/github.com/*"
-            ],
-            "matches": [
-                "https://github.com/*"
-            ]
-        }
-    ],
-    "declarative_net_request": {
-        "rule_resources": [
-            {
-                "id": "ruleset_1",
-                "enabled": true,
-                "path": "rules.json"
-            }
-        ]
-    },
-    "permissions": [
-        "declarativeNetRequest",
-        "declarativeNetRequestWithHostAccess"
-    ],
-    "host_permissions": [
-        "*://*.x.com/*"
-    ]
+	"manifest_version": 3,
+	"name": "Better PWAs",
+	"version": "1.1.0",
+	"description": "Improved installable web apps for selected sites.",
+	"icons": {
+		"48": "images/icon48.png",
+		"128": "images/icon128.png",
+		"512": "images/icon512.png"
+	},
+	"action": {
+		"default_icon": {
+			"48": "images/iconDisabled48.png"
+		},
+		"default_title": "Better PWA: No betterment available"
+	},
+	"background": {
+		"service_worker": "background.js",
+		"type": "module"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://www.smh.com.au/*",
+				"https://app.slack.com/*",
+				"https://www.canva.com/*",
+				"https://app.notion.com/*",
+				"https://claude.ai/*",
+				"https://discord.com/*",
+				"https://outlook.live.com/*",
+				"https://outlook.office.com/*",
+				"https://teams.microsoft.com/*",
+				"https://x.com/*",
+				"https://github.com/*",
+				"https://www.reddit.com/*"
+			],
+			"js": ["injectManifest.js"]
+		}
+	],
+	"web_accessible_resources": [
+		{
+			"resources": [
+				"manifests/www.smh.com.au.json",
+				"manifests/icons/www.smh.com.au/*"
+			],
+			"matches": ["https://www.smh.com.au/*"]
+		},
+		{
+			"resources": [
+				"manifests/app.slack.com.json",
+				"manifests/icons/app.slack.com/*"
+			],
+			"matches": ["https://app.slack.com/*"]
+		},
+		{
+			"resources": [
+				"manifests/www.canva.com.json",
+				"manifests/icons/www.canva.com/*"
+			],
+			"matches": ["https://www.canva.com/*"]
+		},
+		{
+			"resources": [
+				"manifests/app.notion.com.json",
+				"manifests/icons/app.notion.com/*"
+			],
+			"matches": ["https://app.notion.com/*"]
+		},
+		{
+			"resources": [
+				"manifests/claude.ai.json",
+				"manifests/icons/claude.ai/*"
+			],
+			"matches": ["https://claude.ai/*"]
+		},
+		{
+			"resources": [
+				"manifests/discord.com.json",
+				"manifests/icons/discord.com/*"
+			],
+			"matches": ["https://discord.com/*"]
+		},
+		{
+			"resources": [
+				"manifests/outlook.live.com.json",
+				"manifests/outlook.office.com.json",
+				"manifests/icons/outlook.live.com/*"
+			],
+			"matches": [
+				"https://outlook.live.com/*",
+				"https://outlook.office.com/*"
+			]
+		},
+		{
+			"resources": [
+				"manifests/teams.microsoft.com.json",
+				"manifests/icons/teams.microsoft.com/*"
+			],
+			"matches": ["https://teams.microsoft.com/*"]
+		},
+		{
+			"resources": ["manifests/x.com.json", "manifests/icons/x.com/*"],
+			"matches": ["https://x.com/*"]
+		},
+		{
+			"resources": [
+				"manifests/github.com.json",
+				"manifests/icons/github.com/*"
+			],
+			"matches": ["https://github.com/*"]
+		},
+		{
+			"resources": [
+				"manifests/www.reddit.com.json",
+				"manifests/icons/www.reddit.com/*"
+			],
+			"matches": ["https://www.reddit.com/*"]
+		}
+	],
+	"declarative_net_request": {
+		"rule_resources": [
+			{
+				"id": "ruleset_1",
+				"enabled": true,
+				"path": "rules.json"
+			}
+		]
+	},
+	"permissions": [
+		"declarativeNetRequest",
+		"declarativeNetRequestWithHostAccess"
+	],
+	"host_permissions": ["*://*.x.com/*"]
 }
