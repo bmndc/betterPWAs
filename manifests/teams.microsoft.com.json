@@ -6,7 +6,7 @@
 	"scope": "https://teams.microsoft.com/v2/",
 	"display": "standalone",
 	"display_override": ["window-controls-overlay"],
-	"theme_color": "#EBEBEB",
+	"theme_color": "#5B5FC7",
 	"background_color": "#FFFFFF",
 	"icons": [
 		{
