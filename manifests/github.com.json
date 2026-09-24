@@ -73,19 +73,19 @@
 			"purpose": "any"
 		},
 		{
-			"src": "icons/github.com/github-128-maskable.png",
+			"src": "https://raw.githubusercontent.com/bmndc/betterPWAs/refs/heads/main/manifests/icons/github.com/github-128-maskable.png",
 			"type": "image/png",
 			"sizes": "128x128",
 			"purpose": "maskable"
 		},
 		{
-			"src": "icons/github.com/github-192-maskable.png",
+			"src": "https://raw.githubusercontent.com/bmndc/betterPWAs/refs/heads/main/manifests/icons/github.com/github-192-maskable.png",
 			"type": "image/png",
 			"sizes": "192x192",
 			"purpose": "maskable"
 		},
 		{
-			"src": "icons/github.com/github-512-maskable.png",
+			"src": "https://raw.githubusercontent.com/bmndc/betterPWAs/refs/heads/main/manifests/icons/github.com/github-512-maskable.png",
 			"type": "image/png",
 			"sizes": "512x512",
 			"purpose": "maskable"

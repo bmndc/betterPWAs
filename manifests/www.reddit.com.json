@@ -10,43 +10,43 @@
 	"background_color": "#ffffff",
 	"icons": [
 		{
-			"src": "icons/www.reddit.com/reddit-128-maskable.png",
+			"src": "https://raw.githubusercontent.com/bmndc/betterPWAs/refs/heads/main/manifests/icons/www.reddit.com/reddit-128-maskable.png",
 			"sizes": "128x128",
 			"type": "image/png",
 			"purpose": "maskable"
 		},
 		{
-			"src": "icons/www.reddit.com/reddit-192-maskable.png",
+			"src": "https://raw.githubusercontent.com/bmndc/betterPWAs/refs/heads/main/manifests/icons/www.reddit.com/reddit-192-maskable.png",
 			"sizes": "192x192",
 			"type": "image/png",
 			"purpose": "maskable"
 		},
 		{
-			"src": "icons/www.reddit.com/reddit-512-maskable.png",
+			"src": "https://raw.githubusercontent.com/bmndc/betterPWAs/refs/heads/main/manifests/icons/www.reddit.com/reddit-512-maskable.png",
 			"sizes": "512x512",
 			"type": "image/png",
 			"purpose": "maskable"
 		},
 		{
-			"src": "icons/www.reddit.com/reddit-16-monochrome.png",
+			"src": "https://raw.githubusercontent.com/bmndc/betterPWAs/refs/heads/main/manifests/icons/www.reddit.com/reddit-16-monochrome.png",
 			"sizes": "16x16",
 			"type": "image/png",
 			"purpose": "monochrome"
 		},
 		{
-			"src": "icons/www.reddit.com/reddit-32-monochrome.png",
+			"src": "https://raw.githubusercontent.com/bmndc/betterPWAs/refs/heads/main/manifests/icons/www.reddit.com/reddit-32-monochrome.png",
 			"sizes": "32x32",
 			"type": "image/png",
 			"purpose": "monochrome"
 		},
 		{
-			"src": "icons/www.reddit.com/reddit-48-monochrome.png",
+			"src": "https://raw.githubusercontent.com/bmndc/betterPWAs/refs/heads/main/manifests/icons/www.reddit.com/reddit-48-monochrome.png",
 			"sizes": "48x48",
 			"type": "image/png",
 			"purpose": "monochrome"
 		},
 		{
-			"src": "icons/www.reddit.com/reddit-512-monochrome.png",
+			"src": "https://raw.githubusercontent.com/bmndc/betterPWAs/refs/heads/main/manifests/icons/www.reddit.com/reddit-512-monochrome.png",
 			"sizes": "512x512",
 			"type": "image/png",
 			"purpose": "monochrome"
